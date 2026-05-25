@@ -2,8 +2,6 @@
 
 Last checked: 2026-05-25
 
-This comparison is written for Fallout 76 players choosing a modding tool. It focuses on practical user-facing differences, not internal implementation details.
-
 Legend: ✅ Supported, ⚠️ partial/manual/needs attention, ❌ not supported or not built in.
 
 | Feature | NukaMods | Fallout76 QuickConfiguration | Plain-English takeaway |
@@ -27,16 +25,7 @@ Legend: ✅ Supported, ⚠️ partial/manual/needs attention, ❌ not supported 
 | Custom themes and language | ✅ Built-in themes, user-created custom themes, custom theme files, English/Turkish/Japanese, external translation JSON files, and translation overrides. | ⚠️ README lists community translations for several languages, with some marked outdated. | NukaMods lets users create their own themes and customize localization files. QuickConfiguration has a longer community-translation history. |
 | Requirements | ✅ Portable app for Windows Fallout 76 modding, with Steam and Xbox/Game Pass handling. | ⚠️ Windows app built with C#/.NET Framework 4.7.2 and Windows Forms; Archive2 may require the Visual C++ 2012 redistributable. | QuickConfiguration may feel familiar to users of older Windows tools. NukaMods is positioned as a portable manager for current Fallout 76 mod-management workflows. |
 
-## Short Recommendation
-
-Use **NukaMods** if you want a modern Fallout 76 mod manager centered on profiles, load order, Nexus downloads, safe updates, conflict visibility, diagnostics, and reusable INI workflows.
-
-Use **Fallout76 QuickConfiguration** if you want a classic configuration-focused tool, especially for direct INI tweaking, Pip-Boy customization, screenshot browsing, and BA2 bundling workflows, and you are comfortable using a project whose README currently says it is unmaintained.
-
 ## Sources
 
-- NukaMods feature summary: `docs/NEXUS_DESCRIPTION.md`
-- NukaMods INI workflow: `docs/INI_MANAGEMENT_USER_GUIDE.md`
-- NukaMods Inspector workflow: `docs/INSPECTOR_USER_GUIDE.md`
 - Fallout76 QuickConfiguration README: https://github.com/FelisDiligens/Fallout76-QuickConfiguration
 - Fallout76 QuickConfiguration Mod Manager Guide: https://github.com/FelisDiligens/Fallout76-QuickConfiguration/wiki/Mod-Manager-Guide
