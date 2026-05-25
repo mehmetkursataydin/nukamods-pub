@@ -1,0 +1,42 @@
+# NukaMods vs Fallout76 QuickConfiguration
+
+Last checked: 2026-05-25
+
+This comparison is written for Fallout 76 players choosing a modding tool. It focuses on practical user-facing differences, not internal implementation details.
+
+Legend: ✅ Supported, ⚠️ partial/manual/needs attention, ❌ not supported or not built in.
+
+| Feature | NukaMods | Fallout76 QuickConfiguration | Plain-English takeaway |
+| --- | --- | --- | --- |
+| Main purpose | ✅ Fallout 76 mod manager with profiles, load order, Nexus downloads, safe updates, deployment logs, and INI/config tools. | ✅ Fallout 76 configuration tool with INI settings, Pip-Boy visuals, gallery features, and mod management. | Choose NukaMods if your main pain is managing many mods safely. Choose QuickConfiguration if you mainly want a familiar INI-tweak utility with mod-manager features. |
+| Project status | ✅ Current NukaMods repository documentation includes Nexus copy last reviewed in 2026. | ⚠️ The GitHub README currently says the project is unmaintained, though pull requests may still be merged when the maintainer has time. | QuickConfiguration signals lower maintenance expectations, so users should check its repo before choosing it for a new setup. |
+| Local mod install | ✅ Add archives or local mods, drag files into the profile, enable/disable mods, and deploy the active profile. | ✅ Drag and drop `.ba2`, `.zip`, `.rar`, `.7z`, or folders, or use add-archive/add-folder buttons. | Both tools can add local mods. |
+| Nexus downloads | ✅ Supports `nxm://` association, in-app Nexus account/token setup, download queue, retry/resume behavior, and local mod linking. | ⚠️ Supports Nexus login/API for update checks and metadata, but documented update/download steps are more manual. | NukaMods gives users a more guided Nexus workflow. |
+| Load order | ✅ Profile-scoped load order controlled directly in the Mods tab. | ✅ Mods deploy top-to-bottom in the mod list, with move up/down controls and drag-and-drop support. | Both support ordering. NukaMods ties load order more tightly to profiles and deploy state. |
+| Multiple profiles and installs | ✅ Supports Steam and Xbox/Game Pass installs, multiple installs, and separate profiles per install. | ⚠️ Uses game profiles and lets users choose game and mods paths. | NukaMods is stronger when users switch between different setups, installs, or experimental mod lists. |
+| Deployment safety | ✅ Keeps staged files separate from deployed game files, blocks deploy while Fallout 76 is running, supports stop/progress handling, and shows deploy errors in logs and UI. | ⚠️ Deploys enabled mods and writes archive names into the configured Fallout 76 INI resource list. | NukaMods is designed to make deployment easier to inspect, retry, and recover from. |
+| Install/deploy method control | ✅ Per-mod install/deploy type. Each mod can use choices such as symlink, hardlink, or copy, and can target Data or the game root for special cases. | ⚠️ Global deploy mode. Supports bundled BA2 output, separate BA2 archives, frozen separate archives, and loose-file copy, but the deploy method is chosen for the setup rather than per mod. | NukaMods gives finer control when different mods need different install behavior. QuickConfiguration is simpler when one global deploy method is enough. |
+| Safe update workflow | ✅ Safe Update Center lets users review updates, create a safety backup, apply selected updates, and roll back supported changes. | ❌ The guide says there is no auto-update flow; users download the new version, replace files, mark latest, and deploy. | NukaMods is better for users who want update review and recovery built into the app. |
+| INI Tweaks and INI Management tabs | ✅ INI Tweaks tab for curated settings, plus INI Management tab for reusable presets, preset groups, `.nmbundle` import/export, platform-specific INI targets, and game-launch sync. | ✅ Many direct INI controls, including display, graphics, audio, interface, voice chat, VSync, FOV, and mouse-sensitivity fixes. | QuickConfiguration is very focused on direct INI tweaking. NukaMods also gives users a dedicated INI Management workspace for shareable presets and bundles. |
+| Pip-Boy tools | ✅ Profile-scoped Pip-Boy color and preview controls. | ✅ Pip-Boy and Quick-Boy color/resolution settings, Fallout color presets, and preview. | Both cover Pip-Boy customization. |
+| Gallery | ✅ Browses Fallout 76 screenshots, Photo Mode captures, Steam screenshot folders, and custom folders with thumbnail cache controls. | ✅ Provides a gallery for screenshots and photos. | Both have screenshot/gallery features. NukaMods adds custom source and cache controls. |
+| Conflicts and diagnostics | ✅ Includes a conflict scanner plus a config-file conflict handler modal. Users can see the current file, compare old/new versions, pick old or new for highlighted lines, or switch to raw text editing when they need full control. Also includes diagnostics, setup checks, and status/event logs. | ❌ No comparable config-file conflict handling tool is described in the public guide. It shows warnings for likely setup problems, but its guide notes it cannot catch everything. | NukaMods gives users more help finding and resolving conflicts, especially around config files. |
+| Duplicate mod scanner | ✅ Detects duplicate mod entries, including exact Nexus duplicates, same Nexus page entries, possible local duplicates, and identical-content duplicates. The resolve modal lets users choose what to keep, disable duplicates, or uninstall disabled duplicates after review. | ❌ No comparable duplicate mod scanner is described in the public guide. | NukaMods helps prevent accidentally deploying the same mod or same files twice. |
+| Inspector tab | ✅ Dedicated Inspector tab to browse staged files, inspect BA2 contents, extract entries, compare loose files with BA2 baselines, safely edit text/config files, experimentally repack selected BA2 archives, and export archive content as a new mod. | ❌ No comparable staged-file Inspector is described in the public guide. | NukaMods is stronger for users who want to inspect, adjust, repack, or export mod files without leaving the manager. |
+| Migration from manual installs | ✅ Import already-installed BA2 files from the Fallout 76 Data folder while hiding vanilla game BA2 files to avoid accidental management. | ✅ Can import installed mods from the existing setup. | Both help with migration. NukaMods highlights extra guardrails for avoiding base-game files. |
+| Custom themes and language | ✅ Built-in themes, user-created custom themes, custom theme files, English/Turkish/Japanese, external translation JSON files, and translation overrides. | ⚠️ README lists community translations for several languages, with some marked outdated. | NukaMods lets users create their own themes and customize localization files. QuickConfiguration has a longer community-translation history. |
+| Requirements | ✅ Portable app for Windows Fallout 76 modding, with Steam and Xbox/Game Pass handling. | ⚠️ Windows app built with C#/.NET Framework 4.7.2 and Windows Forms; Archive2 may require the Visual C++ 2012 redistributable. | QuickConfiguration may feel familiar to users of older Windows tools. NukaMods is positioned as a portable manager for current Fallout 76 mod-management workflows. |
+
+## Short Recommendation
+
+Use **NukaMods** if you want a modern Fallout 76 mod manager centered on profiles, load order, Nexus downloads, safe updates, conflict visibility, diagnostics, and reusable INI workflows.
+
+Use **Fallout76 QuickConfiguration** if you want a classic configuration-focused tool, especially for direct INI tweaking, Pip-Boy customization, screenshot browsing, and BA2 bundling workflows, and you are comfortable using a project whose README currently says it is unmaintained.
+
+## Sources
+
+- NukaMods feature summary: `docs/NEXUS_DESCRIPTION.md`
+- NukaMods INI workflow: `docs/INI_MANAGEMENT_USER_GUIDE.md`
+- NukaMods Inspector workflow: `docs/INSPECTOR_USER_GUIDE.md`
+- Fallout76 QuickConfiguration README: https://github.com/FelisDiligens/Fallout76-QuickConfiguration
+- Fallout76 QuickConfiguration Mod Manager Guide: https://github.com/FelisDiligens/Fallout76-QuickConfiguration/wiki/Mod-Manager-Guide
